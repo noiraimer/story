@@ -1,7 +1,7 @@
 # Site settings
 title: 解语
 SEOTitle: 无尽藏海 | 解语知音
-header-img: img/home-bg.webp
+header-img: 
 email: liushu1187419589@live.com
 description: ""
 keyword: ""
@@ -77,7 +77,7 @@ ga_domain: huangxuan.me
 
 
 # Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
+sidebar: false                          # whether or not using Sidebar.
 sidebar-about-description: "温故而知新"
 sidebar-avatar:       # use absolute URL, seeing it's used in both `/` and `/about/`
 
