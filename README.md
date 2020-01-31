@@ -1,113 +1,97 @@
-# moving
+![](_assets/images/documentation/chalk-intro@2x.png)
 
-[![Gem Version](https://badge.fury.io/rb/moving.svg)](https://badge.fury.io/rb/moving) [![Build Status](https://travis-ci.org/huangyz0918/moving.svg?branch=master)](https://travis-ci.org/huangyz0918/moving) ![progress](https://img.shields.io/badge/progress-releasing-blue.svg) 
+Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.
 
-Moving is a clean and minimalist theme for [Jekyll](https://jekyllrb.com/), focuses on pure and efficient writing. [[view demo]](http://huangyz.name/moving/) 
+## Overview
 
-Inspired by [Hugo](https://gohugo.io/) theme, [YinYang](https://github.com/joway/hugo-theme-yinyang).
+Features:
+  - About page.
+  - Automatic RSS feed.
+  - Automatic sitemap.
+  - Automatic time to read post indicator.
+  - Cross browser support (supports all modern browsers).
+  - Custom 404 page.
+  - Custom code highlighting.
+  - Customizable pagination.
+  - Dark and Light theme.
+  - Easy setup and deploying.
+  - Enlarge images on click.
+  - Filter on tags.
+  - Optional tag navigation.
+  - Frequently updated with new versions.
+  - Many social media links supported.
+  - Media embed for videos.
+  - PageSpeed optimized.
+  - Proper sharing links for posts on Facebook, Twitter and Google Plus.
+  - SEO optimized.
+  - Support for local fonts.
+  - Support for emoji's.
 
-![](./github/banner.png)
+Integrations
+  - [Disqus](https://disqus.com/)
+  - [Google Analytics](https://analytics.google.com/analytics/web/)
+  - [Google Fonts](https://fonts.google.com/)
+  - [SVG Icons](https://icomoon.io/)
 
-
-## Installation
-
-### New Blog
-If you want to create a new blog using moving. You can follow these steps after setting up the [Jekyll](https://jekyllrb.com) environments:
-
-Clone this repository: 
-```bash
-git clone https://github.com/huangyz0918/moving.git
-```
-
-Move into that directory:
-```bash
-cd moving/
-```
-
-Install required gems using `bundle`:
-```bash
-bundle install
-```
-
-Run the blog in localhost
-```bash
-jekyll serve
-```
-
-Once you successfully run the moving blog, you can modify the theme and add posts by yourself, have fun!
-
-### Add Moving to an Existing Blog
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "moving"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: moving
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install moving
-
-### Deploy to Github Pages
-
-:warning: If you want to publish your site in [Github Pages](https://pages.github.com/). Change `theme: xxx` in `_config.yml` to `remote_theme: huangyz0918/moving` then push to your github repo (this is important, or you will get an error from github pages that not support the moving theme). If you want to test your site locally, you can change that to `theme: moving` and build again.
-
-Here is an [example](https://github.com/huangyz0918/personal-page-blog) for Github Pages.
-
+Used tools
+  - [Autoprefixer](https://github.com/postcss/autoprefixer)
+  - [Circle CI](https://circleci.com/)
+  - [Html-proofer](https://github.com/gjtorikian/html-proofer)
+  - [Jekyll](https://jekyllrb.com/)
+  - [Jekyll Assets](https://github.com/jekyll/jekyll-assets)
+  - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap)
+  - [HTML5 Boilerplate](https://html5boilerplate.com/) (Influenced by)
+  - [Kickster](https://kickster.nielsenramon.com/)
+  - [Retina.js](https://imulus.github.io/retinajs/)
+  - [STACSS](https://stacss.nielsenramon.com/)
+  - [Travis](https://travis-ci.org/)
+  - [Yarn](https://yarnpkg.com)
+  - [Zooming](https://github.com/kingdido999/zooming/)
 
 ## Usage
 
-You can modify the `_config.yml` to custom your blog. An example is if you want to change the back button's text in each post, you can change the `back_to`.
+### Installation
 
-```yaml
-title: Moving # The title of the blog
-author: Your Name # Your name 
-email: your-email@domain.com # your email shown in the footer
-url: http://huangyz.name/moving/ # this is your site's root address.
-description: > # this means to ignore newlines until "show_excerpts:"
-  A clean and minimalist theme for Jekyll.
-favicon: "./favicon.ico" # set the favicon of the site 
+If you haven't installed the following tools then go ahead and do so (make sure you have [Homebrew](https://brew.sh/) installed):
 
-show_excerpts: false # set to true to show excerpts on the homepage
-  
-# Moving date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
-moving:
-  avatar_url: "https://i.loli.net/2019/08/26/JzCLhDWPEybZr2T.jpg" # avatar in about page
-  about_you: a short description about you. # short description about you in about page
-  date_format: "%b %d" # date format of posts in home page
-  back_to: "Home" # In the post page, you have a back button above the title, you can custom the text by yourself.
+    brew install ruby
+    brew install npm
 
-# Build settings
-theme: moving # note, please use huangyz0918/moving if you want to publish to Github Pages.
-```
+On windows, install Ruby and Node with the installers found here:
 
+  - [Ruby](https://rubyinstaller.org/)
+  - [Node.js](https://nodejs.org/en/download/)
 
+Next setup your environment:
 
-## Contributing
+    npm run setup
 
-Bug reports and pull requests are welcome on GitHub at [here](https://github.com/huangyz0918/moving). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+### Development
 
-## Development
+Run Jekyll:
 
-To set up your environment to develop this theme, run `bundle install`.
+    npm run local
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+## Deploy to GitHub Pages
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `moving.gemspec` accordingly.
+Before you deploy, commit your changes to any working branch except the `gh-pages` one and run the following command:
+
+    npm run publish
+
+**Important note**: Chalk does not support the standard way of Jekyll hosting on GitHub Pages. You need to deploy your working branch (can be any branch, for xxx.github.io users: use another branch than `master`) with the `npm run publish` command. Reason for this is because Chalk uses Jekyll plugins that aren't supported by GitHub pages. The `npm run publish` command will automatically build the entire project, then push it to the `gh-pages` branch of your repo. The script creates that branch for you so no need to create it yourself. Also, if you are developing a **project site**, you must set the `baseurl` in `_config.yml` to the name of your repository.
+
+You can find more info on how to use the `gh-pages` branch and a custom domain [here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
+
+[View this](https://github.com/nielsenramon/kickster#automated-deployment-with-circle-ci) for more info about automated deployment with Circle CI.
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+MIT License
 
+## Contributing
+
+1. Fork it (https://github.com/[my-github-username]/chalk/fork)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
